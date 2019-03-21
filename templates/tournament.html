@@ -1,0 +1,10 @@
+{% extends "base_logged.html" %}
+{% block content %}
+<div id="content">
+    <p>Players:</p>
+    {% for player in tr %}
+        <p>{{player}}</p>
+    {% endfor %}
+    {% block content %}{% endblock %}
+</div>
+{% endblock %}

@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>{{title}}</title>
+      <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <style>
+   .layer1 {
+    position: absolute; /* Абсолютное позиционирование */
+    bottom: 13px; /* Положение от нижнего края */
+    right: 350px; /* Положение от правого края */
+    line-height: 5px;
+   }
+   .layer2 {
+    position: absolute; /* Абсолютное позиционирование */
+    bottom: 13px; /* Положение от нижнего края */
+    right: 250px; /* Положение от правого края */
+    line-height: 1px;
+   }
+  </style>
+    <style type="text/css">
+   body { margin: 0; }
+    #content { position: absolute; }
+    #content { overflow: auto; padding: 10px; }
+   #content {
+   width: 1200px; background: #ffdb58;
+    top: 60px; /* Расстояние от верхнего края */
+    left: 250px; /* Расстояние от левого края */
+    bottom: 0;
+   }
+  </style>
+</head>
+  <body data-spy="scroll" data-target=".navbar" data-offset="50">
+  <form action="" method="post" onsubmit="return checkform(this);">
+        {{ form.hidden_tag() }}
+      <nav class="navbar navbar-expand-sm bg-warning navbar-dark fixed-top">
+  <!-- Brand/logo -->
+  <a class="navbar-brand" href="/" style="padding-left:250px;"><h4>CS.Community</h4></a>
+        <div class="layer1">
+            <a href="/registration" class="btn btn-success" role="button">Sign up</a>
+        </div>
+        <div class="layer2">
+            <button type="button" class="btn btn-success" data-toggle="modal" data-target="#myModal">
+            Log in
+            </button>
+        </div>
+           </ul>
+      </nav>
+<!-- The Modal -->
+        <div class="modal" id="myModal">
+          <div class="modal-dialog">
+            <div class="modal-content">
+
+              <!-- Modal Header -->
+              <div class="modal-header">
+                <h4 class="modal-title">Log in</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+              </div>
+
+              <!-- Modal body -->
+              <div class="modal-body">
+                <p>
+                    {{ form.nickname.label }}<br>
+                    {{ form.nickname }}<br>
+                    {% for error in form.nickname.errors %}
+                        <div class="alert alert-danger" role="alert">
+                            {{ error }}
+                        </div>
+                    {% endfor %}
+                    {{ form.password.label }}<br>
+                    {{ form.password }}<br>
+                    {% for error in form.password.errors %}
+                        <div class="alert alert-danger" role="alert">
+                            {{ error }}
+                        </div>
+                    {% endfor %}
+              </div>
+
+              <!-- Modal footer -->
+                <center>
+                    <div class="modal-footer">
+                <p>{{ form.login() }}</p>
+              </div>
+                </center>
+            </div>
+        </div>
+    </div>
+  </form>
+
+<div id="content">
+        <div id="section1" class="container-fluid bg-success" style="padding-top:70px;padding-bottom:70px">
+  <h1>Section 1</h1>
+  <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+  <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+</div>
+<div id="section2" class="container-fluid bg-warning" style="padding-top:70px;padding-bottom:70px">
+  <h1>Section 2</h1>
+  <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+  <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+</div>
+<div id="section3" class="container-fluid bg-success" style="padding-top:70px;padding-bottom:70px">
+  <h1>Section 3</h1>
+  <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+  <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+</div>
+        <div id="section4" class="container-fluid bg-warning" style="padding-top:70px;padding-bottom:70px">
+  <h1>Section 3</h1>
+  <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+  <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+</div>
+        <div id="section5" class="container-fluid bg-success" style="padding-top:70px;padding-bottom:70px">
+  <h1>Section 3</h1>
+  <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+  <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+</div>
+</div>
+    </header>
+  </body>
+</html>

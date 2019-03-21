@@ -1,0 +1,27 @@
+{% extends "base_logged.html" %}
+{% block content %}
+<div id="content">
+    <div>
+        <form method="post">
+    <p>
+        {{ form.name.label }}<br>
+        {{ form.name }}<br>
+        {% for error in form.name.errors %}
+            <div class="alert alert-danger" role="alert">
+                {{ error }}
+            </div>
+        {% endfor %}
+        {{ form.size.label }}<br>
+        {{ form.size }}<br>
+        {% for error in form.size.errors %}
+            <div class="alert alert-danger" role="alert">
+                {{ error }}
+            </div>
+        {% endfor %}</div>
+
+            <button type="submit" class="btn btn-primary">Create</button>
+
+        <p>{{ form.create() }}</p>
+     </form>
+</div>
+{% endblock %}

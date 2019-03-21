@@ -1,0 +1,18 @@
+{% extends "base_logged.html" %}
+{% block content %}
+<div id="content">
+    <div class="btn-group">
+       <a class="nav-link" href="/tournaments/create">
+           <button style="width:210px" type="button" class="btn btn-warning">Create Tournament</button>
+       </a>
+       <a class="nav-link" href="/tournaments/mytournmatents">
+            <button style="width:210px" type="button" class="btn btn-warning">My Tournaments</button>
+       </a>
+   </div>
+    <div>
+        {% for player in tr %}
+            <p>{{player[0] + ": " + player[1]}}</p>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
